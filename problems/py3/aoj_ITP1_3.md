@@ -1,11 +1,12 @@
 # [3. Repetitive Processing ](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/3)
 
-## [A. Print Many Hello World ]https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/3/ITP1_3_A)
+## [A. Print Many Hello World ](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/3/ITP1_3_A)
 
 - 問題: 1000 個の "Hello World" を出力するプログラムを作成して下さい。
 - 入力: なし
 - 解法: 1000回 print する
 - 解法: Loop(for or while)文 を使う
+- 解法: 文字列の掛け算を使う
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_3_A)
 
 
@@ -20,8 +21,9 @@
 while pattern
 ```py
 EOF  = '0'
+MAX = 10000
 i = 0
-while True:
+while i < 1000:
   x = input()
   if x == EOF
     break
@@ -30,7 +32,7 @@ while True:
   # ここに処理を書く
 ```
 
-for pattern
+for pattern 
 ```py
 EOL = 0
 MAX = 10000
@@ -54,19 +56,30 @@ for i in range(MAX):
 while pattern
 ```py
 
-EOF = '0 0'
-
-while True:
+EOL = '0 0'
+MAX = 3000
+i = 0
+while i < MAX:
   line = input()
-  if line == EOF:
+  if line == EOL:
     break
 
   x, y = map(int, line.split())
   # ここに処理を書く
 
 ```
+iter pattern
+```
+EOL = '0 0'
 
-for pattern
+for line in iter(input, EOL):
+  x, y = map(int, line.split())
+
+  # ここに処理を書く
+
+```
+
+for pattern with regular expression
 ```py
 import re
 
@@ -91,7 +104,7 @@ for _ in range(MAX):
 
 ```py
 
-a, b, c = map(int, input())
+a, b, c = map(int, input().split())
 
 for x in range(a, b + 1):
   # ここに処理を書く
