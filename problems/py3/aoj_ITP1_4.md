@@ -86,16 +86,13 @@ for _ in range(MAX):
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_4_D)
 
 ```py
-import sys
-
 max = 1000000
 min = −1000000
 
-
 n = int(input())
-cols = list(map(int, input().split()[:n]))
+a_list = list(map(int, input().split()[:n]))
 
-for col in cols:
-  # 
+for a in a_list:
+
 
 ```
