@@ -8,7 +8,7 @@
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_2_A)
 
 ```py
-a, b = int(input())
+a, b = map(int, input().split())
 ```
 
 ## [B. Range](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/2/ITP1_2_B)
@@ -20,7 +20,7 @@ a, b = int(input())
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_2_B)
 
 ```py
-a, b, c = map(int, input.split())
+a, b, c = map(int, input().split())
 
 ```
 

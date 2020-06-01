@@ -2,7 +2,8 @@
 
 ## 登録(Register)
 
-[アカウント登録](./docs/register.md)
+- [アカウント登録](./docs/register.md)
+- [Teaching Assistant Code](https://onlinejudge.u-aizu.ac.jp/status/users/teacher/submissions/1)
 
 ## Basic Problems
 
