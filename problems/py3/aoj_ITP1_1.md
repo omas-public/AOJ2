@@ -34,7 +34,7 @@ x = int(input())
 
 
 ```py
-a, b = int(input().split())
+a, b = map(int,input().split())
 
 ```
 
