@@ -18,7 +18,7 @@
 - [Repetitive Processing](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/3)
     - [Python3](./problems/py3/aoj_ITP1_3.md)
     - [Javascript](./problems/js/aoj_ITP1_3.md)
-- [Computation]*(https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/4)
+- [Computation](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/4)
     - [Python3](./problems/py3/aoj_ITP1_4.md)
     - [Javascript](./problems/js/aoj_ITP1_4.md)
 - [Structured Program I](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/5)
