@@ -1,0 +1,1 @@
+# [11. Structure and Class](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/9)

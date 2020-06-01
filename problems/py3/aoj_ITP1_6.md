@@ -1,0 +1,1 @@
+# [6. Array](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/6)
