@@ -10,6 +10,7 @@
 - 出力: d, r, f を空白で区切って1行に出力
 - 解法: 算術オペレータを使う
 - 解法: divmod関数を使う
+- 注意: 割り算の結果はformatで小数点の精度を合わせる -> '{:.5f}'.format(f)
 
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_4_A)
 
@@ -27,9 +28,9 @@ a, b = map(int, input().split())
 
 ```py
 import math
-PI = math.PI
+PI = math.pi
 
-r = int(input())
+r = float(input())
 ```
 
 ## [C. Simple Calculator ](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/4/ITP1_4_C)
@@ -45,8 +46,10 @@ r = int(input())
 
 while pattern
 ```py
-END = 0
-while True:
+MAX = 20000
+END = '?'
+counter = 0
+while counter < MAX:
   a, op, b = input().split() 
   if op == END:
     break
@@ -54,6 +57,7 @@ while True:
   # ここに処理 a, b は int に変換せよ
 
 ```
+
 
 for pattern with regular expression
 ```py
@@ -65,8 +69,10 @@ for _ in range(MAX):
   line = input()
   if EOL.match(line):
     break
-
+  
+  a, op, b = line.split()
   # ここに処理 a, b は int に変換せよ
+  
 
 ```
 
