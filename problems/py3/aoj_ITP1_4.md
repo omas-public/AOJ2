@@ -53,7 +53,7 @@ while counter < MAX:
   a, op, b = input().split() 
   if op == END:
     break
-
+  counter += 1
   # ここに処理 a, b は int に変換せよ
 
 ```
