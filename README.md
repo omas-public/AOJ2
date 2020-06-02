@@ -46,7 +46,7 @@
 ## Input Templates 
 
 - [JavaScript](./docs/js_templates.md)
-- [Python3](./docs/js_templates.md)
+- [Python3](./docs/py3_templates.md)
   - [Pythonで使う競技プログラミング用チートシート](https://qiita.com/_-_-_-_-_/items/34f933adc7be875e61d0)
   - [Python3で競技プログラミングする時に知っておきたいtips（入力編）](https://qiita.com/kyuna/items/8ee8916c2f4e36321a1c)
   
