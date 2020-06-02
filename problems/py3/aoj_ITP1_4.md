@@ -93,6 +93,6 @@ n = int(input())
 a_list = list(map(int, input().split()[:n]))
 
 for a in a_list:
-
+    # ここに処理
 
 ```
