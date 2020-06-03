@@ -23,7 +23,7 @@ while pattern
 EOF  = '0'
 MAX = 10000
 i = 0
-while i < 1000:
+while i < MAX:
   x = input()
   if x == EOF
     break
