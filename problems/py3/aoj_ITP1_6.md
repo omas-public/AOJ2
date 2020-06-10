@@ -46,8 +46,8 @@ bfrv_list = [input().split() for _ in range(n)]
 
 - 問題: ベクトルと行列の積
 - 入力: n, m, aij, bi
-- 出力: 各部屋の入居者数
-- 解法: 3重配列を作り値を変化させ出力
+- 出力: 行列の積
+- 解法: aij * bi
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_6_D)
 
 ```py
