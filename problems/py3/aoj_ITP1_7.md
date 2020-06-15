@@ -37,15 +37,15 @@ for line in iter(input, EOL):
 ## [C. Spreadsheet ](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/7/ITP1_7_C)
 
 - 問題: 表の要素を読み込んで、各行と列の合計を挿入した新しい表を出力する
-- 入力: n, x
-- 出力: 合計が x となる組み合わせの数
-- 解法: 組み合わせを出して合計しカウントする
+- 入力: r, c, matrix
+- 出力:
+- 解法: 
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_7_C)
 
 ```py
 
 r, c = map(int, input().split())
-matrix = [ map(int, input().split()) for _ in range(r) ] 
+matrix = [ list(map(int, input().split())) for _ in range(r) ] 
 
 ```
 
@@ -61,8 +61,9 @@ matrix = [ map(int, input().split()) for _ in range(r) ]
 ```py
 
 n, m, l = map(int, input().split())
-A = [ map(int, input().split()) for _ in range(n) ] 
-B = [ map(int, input().split()) for _ in range(m) ] 
+A = [ list(map(int, input().split())) for _ in range(n) ] 
+B = [ list(map(int, input().split())) for _ in range(m) ] 
+
 
 
 ```
