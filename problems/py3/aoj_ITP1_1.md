@@ -42,7 +42,7 @@ a, b = map(int, input().split())
 
 - 問題: 秒単位の時間 S を `h:m:s` の形式へ変換
 - 入力: `S`
-- 解法: h = S // 60 * 60, m = (S - h * 60) // 60, s = S - (h * 60) - (m * 60) 
+- 解法: h = S // 60 * 60, m = (S - (h * 60 * 60)) // 60, s = S - (h * 60 * 60) - (m * 60)
 - 解法: h = S // (60 * 60) , m = S % (60 * 60) // 60, s = S % 60
 - [solutions](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_1_D)
 
