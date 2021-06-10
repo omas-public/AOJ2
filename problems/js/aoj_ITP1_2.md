@@ -8,17 +8,19 @@
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_2_A)
 
 ```js
-'use strict';
-(function(stdin) {
-  var inputs = stdin.toString().trim().split('\n');
-  var params = inputs[0].split(' ').map(Number);
+(stdin => {
+// define function
 
-  (function(a, b) {
-    // ここに処理を書く
+// declare variables
+  const inputs = stdin.toString().split('\n')
+  const [a, b] = inputs[0].split(' ').map(Number)  // 数値に変換 
 
-  }(params[0], params[1]));
+// ここに処理を書く 
 
-}(require('fs').readFileSync('/dev/stdin', 'utf8')));
+
+
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
+
 ```
 
 ## [B. Range](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/2/ITP1_2_B)
@@ -29,17 +31,20 @@
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_2_B)
 
 ```js
-'use strict';
-(function(stdin) {
-  var inputs = stdin.toString().trim().split('\n');
-  var params = inputs[0].split(' ').map(Number);
+(stdin => {
+// define function
 
-  (function(a, b, c) {
-    // ここに処理を書く
+// declare variables
+  const inputs = stdin.toString().split('\n')
+  const [a, b, c] = inputs[0].split(' ').map(Number)  // 数値に変換 
 
-  }(params[0], params[1], params[2]));
+// ここに処理を書く 
 
-}(require('fs').readFileSync('/dev/stdin', 'utf8')));
+
+
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
+
+
 ```
 
 ## [C. Sorting Three Numbers](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/2/ITP1_2_C)
@@ -50,34 +55,36 @@
 - **解法:配列をソートして結果を返す**
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_2_C)
 
-
 ```js
-'use strict';
-(function(stdin) {
-  var inputs = stdin.toString().trim().split('\n');
-  var params = inputs[0].split(' ').map(Number);
+(stdin => {
+// define function
 
-  (function(a, b, c) {
-    // ここに処理を書く
+// declare variables
+  const inputs = stdin.toString().split('\n')
+  const [a, b, c] = inputs[0].split(' ').map(Number)  // 数値に変換 
 
-  }(params[0], params[1], params[2]));
+// ここに処理を書く 
 
-}(require('fs').readFileSync('/dev/stdin', 'utf8')));
+
+
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
 ```
+
 > Array.protorype.sort() を使う場合
 
 ```js
-'use strict';
-(function(stdin) {
-  var inputs = stdin.toString().trim().split('\n');
-  var params = inputs[0].split(' ').map(Number);
+(stdin => {
+// define function
 
-  (function(array) {
-    // ここに処理を書く
+// declare variables
+  const inputs = stdin.toString().split('\n')
+  const list = inputs[0].split(' ').map(Number)  // 数値に変換 
 
-  })(params);
+// ここに処理を書く 
 
-}(require('fs').readFileSync('/dev/stdin', 'utf8')));
+  return [...list].sort((a, b) => a - b)).join(' ')
+
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
 ```
 
 ## [D. Circle in a Rectangle](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/2/ITP1_2_D)
@@ -88,44 +95,48 @@
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_2_D)
 
 ```js
-'use strict';
-(function(stdin) {
-  var inputs = stdin.toString().trim().split('\n');
-  var params = inputs[0].split(' ').map(Number);
+(stdin => {
+// define function
 
-  (function(W, H, x, y, r) {
-    // ここに処理を書く
+// declare variables
+  const inputs = stdin.toString().split('\n')
+  const [W, H, x, y, r]= inputs[0].split(' ').map(Number)  // 数値に変換 
 
-  }(params[0], params[1], params[2], params[3], params[4]));
+// ここに処理を書く 
 
-}(require('fs').readFileSync('/dev/stdin', 'utf8')));
+
+
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
 ```
+
 > オブジェクトを使った解法
 
 ```js
-'use strict';
-(function(stdin) { 
-  var inputs = stdin.toString().trim().split('\n');
-  var params = inputs[0].split(' ').map(Number);
-  var Circle = function(x, y, r){
-    this.left   = x - r;
-    this.right  = x + r;
-    this.top    = y + r;
-    this.bottom = y - r;
-  };
-
-  Circle.prototype.within = function(h,w) {
+class Circle {
+  constructor(x, y, r) {
+    this.x = x
+    this.y = y
+    this.r = r
+    this.left   = x - r
+    this.right  = x + r
+    this.top    = y + r
+    this.bottom = y - r
+  }
+  within(h, w) {
     return [this.bottom, this.left, h - this.top , w - this.right ]
-        .every(function(v) {
-          return v >= 0;
-        });
-  };
+      .every(v =>  v >= 0)        
+  }
+}
 
-  (function(H,W,circle) {
-
-    console.log(['No','Yes'][Number(circle.within(H,W))]);
-
-  })(params[0],params[1],new Circle(params[2],params[3],params[4]); 
-
-}(require('fs').readFileSync('/dev/stdin', 'utf8')));
+(stdin => { 
+  const inputs = stdin.toString().trim().split('\n')
+  const [W, H, x, y, r]= inputs[0].split(' ').map(Number)
+  const circle = new Circle(x, y, r)
+  
+  console.log(
+    circle.within(H, W)
+      ? 'Yes'
+      : 'No'
+  )
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
 ```
