@@ -8,21 +8,18 @@
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_1_A)
 
 ```js
-'use strict';
-(function() {
-  //ここに処理を書く
+(stdin => {
+  // define function
 
-}()); 
-```
+  // declare variables
+  const input = stdin.toString().split('\n')
 
-> 引数を渡して処理
+  // ここに処理を書く 
 
-```js
-'use strict';
-(function(word) {
-  //ここに処理を書く
 
-}('Hello World')); 
+  // ここまで
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
+
 ```
 
 ## [B. X Cubic](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_B)
@@ -34,16 +31,19 @@
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_1_B)
 
 ```js
-'use strict';
-(function(stdin) {
-  var inputs = stdin.toString().trim().split('\n');
+(stdin => {
+// define function
 
-  (function(x) {
-    // ここに処理を書く
+// declare variables
+  const input = stdin.toString().split('\n')
+  const x = parseInt(inputs[0], 10)  // 数値に変換 
 
-  })(parseInt(inputs[0], 10)); // 数値型に
+// ここに処理を書く 
 
-}(require('fs').readFileSync('/dev/stdin', 'utf8')));
+
+
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
+
 ```
 
 ## [C. Rectangle](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_C)
@@ -53,19 +53,19 @@
 - 解法:面積は a * b, 周の長さは (a + b) * 2
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_1_C)
 
-
 ```js
-'use strict';
-(function(stdin) {
-  var inputs = stdin.toString().trim().split('\n');
-  var params = inputs[0].split(' ').map(Number);
+(stdin => {
+  // define function
 
-  (function(a, b) {
-    // ここに処理を書く
+  // declare variables
+  const input = stdin.toString().split('\n')
+  const [a, b] = inputs[0].split(' ').map(Number)  // 数値に変換 
 
-  })(params[0], params[1]);
+  // ここに処理を書く 
 
-}(require('fs').readFileSync('/dev/stdin', 'utf8')));
+
+
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
 ```
 
 ## [D. Watch](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/1/ITP1_1_D)
@@ -77,14 +77,16 @@
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_1_D)
 
 ```js
-'use strict';
-(function(stdin) {
-  var inputs = stdin.toString().trim().split('\n');
+(stdin => {
+  // define function
 
-  (function(S) {
-    // ここに処理を書く
+  // declare variables
+  const input = stdin.toString().split('\n')
+  const S = parseInt(inputs[0], 10)  // 数値に変換 
 
-  })(parseInt(inputs[0], 10)); // 数値型に
+  // ここに処理を書く 
 
-}(require('fs').readFileSync('/dev/stdin', 'utf8')));
+
+
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
 ```
