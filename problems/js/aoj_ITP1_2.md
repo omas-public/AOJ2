@@ -90,8 +90,8 @@
 ## [D. Circle in a Rectangle](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/2/ITP1_2_D)
 
 - 問題:長方形の中に円が含まれるかを判定するプログラム
-- 入力:5つの整数 W,H,x,y,r
-- 解法:W <= x + r, H <= y + r, 0 <= x - r, 0 <= y - r 
+- 入力:5つの整数 W, H, x, y, r
+- 解法:W <= x + r, H <= y + r, 0 <= x - r, 0 <= y - r
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_2_D)
 
 ```js
@@ -132,11 +132,9 @@ class Circle {
   const inputs = stdin.toString().trim().split('\n')
   const [W, H, x, y, r]= inputs[0].split(' ').map(Number)
   const circle = new Circle(x, y, r)
+  const within = circle.within(H, W)
   
-  console.log(
-    circle.within(H, W)
-      ? 'Yes'
-      : 'No'
-  )
+  console.log(within ? 'Yes': 'No')
+  
 })(require('fs').readFileSync('/dev/stdin', 'utf8'))
 ```

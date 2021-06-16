@@ -8,7 +8,20 @@
 - **解法:Loop(for or while)文 を使う**
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_3_A)
 
+```js
+(stdin => {
+  // define function
 
+  // declare variables
+  const inputs = stdin.toString().split('\n')
+
+  // ここに処理を書く 
+
+
+  // ここまで
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
+
+```
 ## [B. Print Test Cases ](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/3/ITP1_3_B)
 
 - 問題:データ x ごとに,Case i: x のように出力して下さい：
@@ -19,6 +32,18 @@
 
 ```js
 // Array.forEach() を 使ったパターン
+(stdin => {
+  // define function
+
+  // declare variables
+  const inputs = stdin.toString().split('\n')
+
+  // ここに処理を書く 
+
+
+  // ここまで
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
+
 'use strict';
 (function(stdin) {
   var EOF    = '0';
@@ -39,7 +64,7 @@
 
 - 問題:2つの整数 x, y を読み込み、それらを値が小さい順に出力
 - 入力:各データセットは空白で区切られた2つの整数 x, y を含む1行から構成
-- 解法:Loop(for,while)文 もしくは配列のMap,forEachを使う
+- 解法:Loop(for,while)文 もしくは配列のMap, forEachを使う
 - 解法:大小の比較は if文,Math.max() Math.min(),もしくはarray.sort()を使う
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_3_C)
 

@@ -12,7 +12,7 @@
   // define function
 
   // declare variables
-  const input = stdin.toString().split('\n')
+  const inputs = stdin.toString().split('\n')
 
   // ここに処理を書く 
 
@@ -35,7 +35,7 @@
 // define function
 
 // declare variables
-  const input = stdin.toString().split('\n')
+  const inputs = stdin.toString().split('\n')
   const x = parseInt(inputs[0], 10)  // 数値に変換 
 
 // ここに処理を書く 
@@ -58,7 +58,7 @@
   // define function
 
   // declare variables
-  const input = stdin.toString().split('\n')
+  const inputs = stdin.toString().split('\n')
   const [a, b] = inputs[0].split(' ').map(Number)  // 数値に変換 
 
   // ここに処理を書く 
@@ -81,7 +81,7 @@
   // define function
 
   // declare variables
-  const input = stdin.toString().split('\n')
+  const inputs = stdin.toString().split('\n')
   const S = parseInt(inputs[0], 10)  // 数値に変換 
 
   // ここに処理を書く 
