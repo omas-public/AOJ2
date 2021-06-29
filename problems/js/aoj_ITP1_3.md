@@ -43,19 +43,18 @@
 
   // ここまで
 })(require('fs').readFileSync('/dev/stdin', 'utf8'))
+```
 
-'use strict';
-(function(stdin) {
-  var EOF    = '0';
-  var inputs = stdin.toString().trim().split('\n');
+array.protptype.forEach
 
-  (function(array) {
-
-    array.forEach(function(x, index) {
-      console.log('Case', index + ':', x);
-    });
-
-  })(inputs.slice(0, inputs.indexOf(EOF)));
+```js
+(stdin => {
+  const EOF    = '0'
+  const inputs = stdin.toString().trim().split('\n')
+  const array  = inputs.slice(0, inputs.indexOf(EOF))
+  array.forEach((x, index) => {
+    console.log('Case', index + ':', x)
+  })
 
 }(require('fs').readFileSync('/dev/stdin', 'utf8')));
 ```
