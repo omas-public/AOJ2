@@ -82,7 +82,7 @@
 
 // ここに処理を書く 
 
-  console.log([a, b, c].sort((a, b) => a - b)).join(' '))
+  console.log([a, b, c].sort((a, b) => a - b).join(' '))
 
 })(require('fs').readFileSync('/dev/stdin', 'utf8'))
 ```
