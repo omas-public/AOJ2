@@ -78,11 +78,11 @@
 
 // declare variables
   const inputs = stdin.toString().split('\n')
-  const list = inputs[0].split(' ').map(Number)  // 数値に変換 
+  const [a, b, c] = inputs[0].split(' ').map(Number)  // 数値に変換 
 
 // ここに処理を書く 
 
-  return [...list].sort((a, b) => a - b)).join(' ')
+  console.log([a, b, c].sort((a, b) => a - b)).join(' '))
 
 })(require('fs').readFileSync('/dev/stdin', 'utf8'))
 ```
