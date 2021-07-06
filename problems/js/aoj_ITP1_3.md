@@ -36,7 +36,9 @@
   // define function
 
   // declare variables
-  const inputs = stdin.toString().split('\n')
+  const EOF    = '0'
+  const inputs = stdin.toString().trim().split('\n')
+  const lines  = inputs.slice(0, inputs.indexOf(EOF))
 
   // ここに処理を書く 
 
@@ -57,6 +59,28 @@ array.protptype.forEach
   })
 
 }(require('fs').readFileSync('/dev/stdin', 'utf8')));
+```
+
+for of pattern
+
+```.js
+(stdin => {
+  // define function
+
+  // declare variables
+  const EOF    = '0'
+  const inputs = stdin.toString().trim().split('\n')
+  const lines  = inputs.slice(0, inputs.indexOf(EOF))
+  // ここに処理を書く
+  const buf = []
+
+  for (const [i, line] of lines.entries()) {
+    buf.push(`Case ${i + 1}: ${line}`)
+  } 
+  console.log(buf.join('\n'))
+
+  // ここまで
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
 ```
 
 ## [C. Swapping Two Numbers ](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/3/ITP1_3_C)
