@@ -53,7 +53,7 @@ array.protptype.forEach
   const inputs = stdin.toString().trim().split('\n')
   const array  = inputs.slice(0, inputs.indexOf(EOF))
   array.forEach((x, index) => {
-    console.log('Case', index + ':', x)
+    console.log(`Case ${index + 1}: ${x}`)
   })
 
 }(require('fs').readFileSync('/dev/stdin', 'utf8')));
