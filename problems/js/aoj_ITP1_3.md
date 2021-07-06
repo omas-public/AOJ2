@@ -173,5 +173,5 @@ for of pattern
   
   
 
-}(require('fs').readFileSync('/dev/stdin', 'utf8')))
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
 ```
