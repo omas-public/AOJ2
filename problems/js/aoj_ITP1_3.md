@@ -164,31 +164,10 @@ for of pattern
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_3_D)
 
 ```js
-'use strict';
-(function(stdin) {
+(stdin => {
 
-  var inputs = stdin.toString().split('\n');
-  var cols   = inputs[0].split(' ').map(Number);
-  (function(numbers, divisable) {
+  const inputs = stdin.toString().split('\n');
+  const [a, b, c] = inputs[0].split(' ').map(Number);
 
-    console.log(numbers.filter(divisable).length);
-
-  })(range(cols[0], cols[1]), isDivisable(cols[2]));
-
-  function range(n, m) {
-    var array = [];
-
-    for (var i = n; i < m + 1; i++) {
-      array.push(i);
-    }
-    return array;
-  }
-
-  function isDivisable(diviser) {
-    return function(n) {
-      return diviser % n === 0;
-    };
-  }
-
-}(require('fs').readFileSync('/dev/stdin', 'utf8')));
+}(require('fs').readFileSync('/dev/stdin', 'utf8')))
 ```
