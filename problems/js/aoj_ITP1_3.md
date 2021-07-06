@@ -126,6 +126,7 @@ for of pattern
   }
   // ここまで
 })(require('fs').readFileSync('/dev/stdin', 'utf8'))
+```
 
 // for of pattern
 
@@ -166,8 +167,11 @@ for of pattern
 ```js
 (stdin => {
 
-  const inputs = stdin.toString().split('\n');
-  const [a, b, c] = inputs[0].split(' ').map(Number);
+  // declare variable
+  const inputs = stdin.toString().split('\n')
+  const [a, b, c] = inputs[0].split(' ').map(Number)
+  
+  
 
 }(require('fs').readFileSync('/dev/stdin', 'utf8')))
 ```
