@@ -92,30 +92,37 @@ for of pattern
 - [solution](https://onlinejudge.u-aizu.ac.jp/solutions/problem/ITP1_3_C)
 
 ```js
-// Arrays.sortを使って並べ替え
-'use strict';
-(function(stdin) {
-  var EOF = '0 0';
-  var inputs = stdin.toString().trim().split('\n');
-  var matrics = inputs.slice(0, inputs.indexOf(EOF)).map(function(v) {
-    return v.split(' ').map(Number);
-  });
+(stdin => {
 
-  (function(matrics) {
+  // declare variables
+  const EOF = '0 0'
+  const inputs = stdin.toString().trim().split('\n')
+  const matrics = inputs
+    .slice(0, inputs.indexOf(EOF))
+    .map(v => v.split(' ').map(Number))
 
-    matrics.map(function(v) {
-      return v.sort(function(a, b) {
-        return a - b;
-      });
-    })
-    .forEach(function(v) {
-      console.log(v[0], v[1]);
-    });
+  // ここに処理を書く
 
-  })(matrics);
-
-}(require('fs').readFileSync('/dev/stdin', 'utf8')));
+  // ここまで
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
 ```
+
+// Arrays.sortを使って並べ替え
+
+```js
+(stdin => {
+
+  // declare variables
+  const EOF = '0 0'
+  const inputs = stdin.toString().trim().split('\n')
+  const matrics = inputs
+    .slice(0, inputs.indexOf(EOF))
+    .map(v => v.split(' ').map(Number))
+  
+  // ここに処理を書く
+
+  // ここまで
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
 
 ```js
 'use strict';
