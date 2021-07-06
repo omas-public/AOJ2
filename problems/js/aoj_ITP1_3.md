@@ -157,7 +157,7 @@ for of pattern
 ```
 
 
-## [D. How Many Divisors? ](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/3/ITP1_3__D)
+## [D. How Many Divisors? ](https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/3/ITP1_3_D)
 
 - 問題:3つの整数 a,b,c を読み込み、a から b までの整数の中に、c の約数がいくつあるかを求める
 - 入力:a,b,c が1つの空白区切りで1行
