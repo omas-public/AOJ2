@@ -115,40 +115,44 @@ for of pattern
   // declare variables
   const EOF = '0 0'
   const inputs = stdin.toString().trim().split('\n')
-  const matrics = inputs
+  const matrix = inputs
     .slice(0, inputs.indexOf(EOF))
     .map(v => v.split(' ').map(Number))
   
   // ここに処理を書く
-
+  const lines = [...matrix].map(v => v.sort((a, b) => a - b))
+  for (const [a, b] of lines) {
+    console.log(a, b)
+  }
   // ここまで
 })(require('fs').readFileSync('/dev/stdin', 'utf8'))
 
+// for of pattern
+
 ```js
-'use strict';
-// Math.max Math.min を使ったパターン
-(function(stdin) {
-  var EOF     = '0 0';
-  var inputs  = stdin.toString().trim().split('\n');
-  var matrics = inputs.slice(0, inputs.indexOf(EOF)).map(function(v) {
-    return v.split(' ').map(Number);
-  });
+(stdin => {
 
-  (function(matrics) {
+  // declare variable
+  const EOF = '0 0'
+  const inputs = stdin.toString().trim().split('\n')
+  const matrix = inputs
+    .slice(0, inputs.indexOf(EOF))
+    .map(v => v.split(' ').map(Number))
 
-    matrics.map(function(v) {
-      return [
-        Math.min(v[0], v[1])
-        , Math.max(v[0], v[1])
-      ];
-    })
-    .forEach(function(v) {
-      console.log(v[0], v[1]);
-    });
+  // main
 
-  })(matrics);
+  let buf = []
+  for (const [a, b] of matrix) {
+    buf.push([Math.min(a, b), Math.max(a, b)])
+  }
+  
+  // display
+  for (const array of buf) {
+    console.log(array.join(' '))
+  }
 
-}(require('fs').readFileSync('/dev/stdin', 'utf8')));
+
+})(require('fs').readFileSync('/dev/stdin', 'utf8'))
 ```
 
 
